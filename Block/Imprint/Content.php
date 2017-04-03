@@ -8,7 +8,6 @@ namespace FireGento\MageSetup\Block\Imprint;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Directory\Api\CountryInformationAcquirerInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class Content
@@ -138,6 +137,6 @@ JS;
      */
     public function getImprintValue($field)
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_IMPRINT . $field, ScopeInterface::SCOPE_STORES);
+        return $this->scopeConfig->getValue(self::XML_PATH_IMPRINT . $field);
     }
 }
