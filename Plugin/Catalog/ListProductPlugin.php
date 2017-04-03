@@ -46,9 +46,8 @@ class ListProductPlugin
                 'catalog/frontend/display_delivery_time',
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             )) {
+;
             return $deliveryBlock->toHtml() . $result;
-        } else {
-            return $result;
         }
     }
 }
